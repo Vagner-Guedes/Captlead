@@ -1,0 +1,4 @@
+[07-May-2026 17:38:49 America/Sao_Paulo] PHP Warning:  mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\Capt-Lead-PHP\config.php on line 169
+[08-May-2026 16:53:14 America/Sao_Paulo] PHP Warning:  Constant CAPTLEADS_SECURE already defined in C:\xampp\htdocs\Capt-Lead-PHP\index.php on line 3
+[08-May-2026 16:53:59 America/Sao_Paulo] PHP Warning:  Constant CAPTLEADS_SECURE already defined in C:\xampp\htdocs\Capt-Lead-PHP\index.php on line 3
+[08-May-2026 16:55:22 America/Sao_Paulo] PHP Warning:  Constant CAPTLEADS_SECURE already defined in C:\xampp\htdocs\Capt-Lead-PHP\index.php on line 3

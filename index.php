@@ -1,4 +1,5 @@
-<?php define('CAPTLEADS_SECURE', true); require_once 'config.php'; ?>
+<?php define('CAPTLEADS_SECURE', true);
+require_once 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,16 +10,16 @@
         content="Capt Leads - Transforme telas em oportunidades reais de negócio. Capture leads em tempo real através de veículos por app, totens interativos, TV corporativa e sistema de filas.">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#10b981">
-    
+
     <title>Capt Leads | Sua marca em movimento. Leads em tempo real.</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <link rel="shortcut icon"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2310b981'/%3E%3Ctext x='50' y='67' text-anchor='middle' fill='white' font-size='40' font-weight='bold'%3EC%3C/text%3E%3C/svg%3E"
         type="image/svg+xml">
@@ -32,7 +33,7 @@
 
     <header class="header">
         <div class="container header-container">
-            <div class="logo">
+            <div class="logo" style="cursor: pointer;" onclick="window.location.href='#home'">
                 <div class="logo-icon" style="font-size: 2rem;">
                     <i class="fas fa-wifi" style="color: #10b981;"></i>
                 </div>
@@ -45,8 +46,17 @@
                     <li><a href="#solucoes">Soluções</a></li>
                     <li><a href="#como-funciona">Como funciona</a></li>
                     <li><a href="#beneficios">Benefícios</a></li>
-                    <li><a href="#contato" class="nav-cta">Solicitar demo</a></li>
-                    <li><a href="https://admin.captleads.com.br" target="_blank" rel="noopener noreferrer" class="btn-demo">Acesse o sistema</a></li>
+                    <li class="nav-dropdown">
+                        <button class="dropbtn" id="actionMenuBtn">
+                            <i class="fas fa-bars"></i> Saiba Mais
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-content" id="actionDropdown">
+                            <li><a href="#contato" class="nav-cta">Solicitar demo</a></li>
+                            <li><a href="https://admin.captleads.com.br" target="_blank" class="btn-demo">Acesse o sistema</a></li>
+                            <li><a href="#" id="btnMidiaKit" class="btn-demo">Download Mídia kit</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
@@ -56,7 +66,6 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
         <div class="hero-bg-shapes">
             <div class="shape shape-1"></div>
             <div class="shape shape-2"></div>
@@ -87,6 +96,10 @@
                     <div class="solution-tag">
                         <i class="fas fa-car-side"></i>
                         <span>Veículos por app</span>
+                    </div>
+                    <div class="solution-tag">
+                        <i class="fas fa-elevator"></i>
+                        <span>Telas em elevadores</span>
                     </div>
                     <div class="solution-tag">
                         <i class="fas fa-tv"></i>
@@ -139,34 +152,97 @@
                 <p>Tecnologia de ponta que impulsiona negócios de todos os segmentos</p>
             </div>
 
-            <div class="clientes-grid" data-aos="fade-up" data-aos-delay="100">
-                <div class="cliente-card cliente-card-1">
-                    <div class="cliente-icon">
-                        <img src="assets/images/santaluzia.jpg" alt="Hospital Santa Luzia" class="cliente-img-icon" loading="lazy">
+            <div class="clientes-carrossel-infinito">
+                <div class="carrossel-track">
+                    <div class="logo-item">
+                        <img src="assets/images/santaluzia.png" alt="Hospital Santa Luzia">
+                        <span class="logo-nome">Hospital Santa Luzia</span>
+                        <span class="logo-descricao">Saúde & Bem-estar</span>
                     </div>
-                    <div class="cliente-info">
-                        <h3>Hospital Santa Luzia</h3>
-                        <p>Saúde & Bem-estar</p>
+                    <div class="logo-item">
+                        <img src="assets/images/mercadolivre.png" alt="Mercado Livre">
+                        <span class="logo-nome">Mercado Livre</span>
+                        <span class="logo-descricao">E-commerce & Varejo</span>
                     </div>
-                </div>
-
-                <div class="cliente-card cliente-card-2">
-                    <div class="cliente-icon">
-                        <img src="assets/images/mercadolivre.png" alt="Mercado Livre" class="cliente-img-icon" loading="lazy">
+                    <div class="logo-item">
+                        <img src="assets/images/unopar.png" alt="Unopar">
+                        <span class="logo-nome">Unopar</span>
+                        <span class="logo-descricao">Educação & Tecnologia</span>
                     </div>
-                    <div class="cliente-info">
-                        <h3>Mercado Livre</h3>
-                        <p>E-commerce & Varejo</p>
+                    <div class="logo-item">
+                        <img src="assets/images/anhanguera.png" alt="Anhanguera">
+                        <span class="logo-nome">Anhanguera</span>
+                        <span class="logo-descricao">Educação Superior</span>
                     </div>
-                </div>
-
-                <div class="cliente-card cliente-card-3">
-                    <div class="cliente-icon">
-                        <img src="assets/images/unopar.png" alt="Unopar" class="cliente-img-icon" loading="lazy">
+                    <div class="logo-item">
+                        <img src="assets/images/fontesdosol.png" alt="Fontes do Sol">
+                        <span class="logo-nome">Fontes do Sol</span>
+                        <span class="logo-descricao">Energia Solar</span>
                     </div>
-                    <div class="cliente-info">
-                        <h3>Unopar</h3>
-                        <p>Educação & Tecnologia</p>
+                    <div class="logo-item">
+                        <img src="assets/images/hardworkfilms.png" alt="Hard Work Films">
+                        <span class="logo-nome">Hard Work Films</span>
+                        <span class="logo-descricao">Produção Audiovisual</span>
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/novarota.png" alt="Nova Rota">
+                        <span class="logo-nome">Nova Rota</span>
+                        <span class="logo-descricao">Logística & Transporte</span>
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/petrodart.png" alt="Petro Dart">
+                        <span class="logo-nome">Petro Dart</span>
+                        <span class="logo-descricao">Petróleo & Gás</span>
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/skate.png" alt="Skate Wear">
+                        <span class="logo-nome">Skate Wear</span>
+                        <span class="logo-descricao">Esportes & Lifestyle</span>
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/santaluzia.png" alt="Hospital Santa Luzia">
+                        <span class="logo-nome">Hospital Santa Luzia</span>
+                        <span class="logo-descricao">Saúde & Bem-estar</span>
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/mercadolivre.png" alt="Mercado Livre">
+                        <span class="logo-nome">Mercado Livre</span>
+                        <span class="logo-descricao">E-commerce & Varejo</span>
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/unopar.png" alt="Unopar">
+                        <span class="logo-nome">Unopar</span>
+                        <span class="logo-descricao">Educação & Tecnologia</span>
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/anhanguera.png" alt="Anhanguera">
+                        <span class="logo-nome">Anhanguera</span>
+                        <span class="logo-descricao">Educação Superior</span>
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/fontesdosol.png" alt="Fontes do Sol">
+                        <span class="logo-nome">Fontes do Sol</span>
+                        <span class="logo-descricao">Energia Solar</span>
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/hardworkfilms.png" alt="Hard Work Films">
+                        <span class="logo-nome">Hard Work Films</span>
+                        <span class="logo-descricao">Produção Audiovisual</span>
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/novarota.png" alt="Nova Rota">
+                        <span class="logo-nome">Nova Rota</span>
+                        <span class="logo-descricao">Logística & Transporte</span>
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/petrodart.png" alt="Petro Dart">
+                        <span class="logo-nome">Petro Dart</span>
+                        <span class="logo-descricao">Petróleo & Gás</span>
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/images/skate.png" alt="Skate Wear">
+                        <span class="logo-nome">Skate Wear</span>
+                        <span class="logo-descricao">Esportes & Lifestyle</span>
                     </div>
                 </div>
             </div>
@@ -240,6 +316,7 @@
                 <h2>Sua marca aparece. <span class="orange">Seus leads são capturados</span> automaticamente.</h2>
                 <p>Ative campanhas inteligentes em múltiplas plataformas</p>
             </div>
+
             <div class="solucoes-grid">
                 <div class="solucao-card" data-aos="zoom-in" data-aos-delay="0">
                     <div class="card-icon"><i class="fas fa-car-side"></i></div>
@@ -253,6 +330,19 @@
                     </div>
                     <a href="#contato" class="card-link">Quero saber mais <i class="fas fa-arrow-right"></i></a>
                 </div>
+
+                <div class="solucao-card" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="card-icon"><i class="fas fa-arrow-up"></i></div>
+                    <h3>Telas em elevadores</h3>
+                    <p>Transforme o tempo de deslocamento vertical em oportunidade de comunicação com conteúdo interativo e de alto impacto.</p>
+                    <div class="card-features">
+                        <span><i class="fas fa-check"></i> Alta circulação</span>
+                        <span><i class="fas fa-check"></i> Tempo de espera cativo</span>
+                        <span><i class="fas fa-check"></i> Conteúdo dinâmico</span>
+                    </div>
+                    <a href="#contato" class="card-link">Quero saber mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+
                 <div class="solucao-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="card-icon"><i class="fas fa-chalkboard-user"></i></div>
                     <h3>Totens interativos personalizados</h3>
@@ -265,6 +355,7 @@
                     </div>
                     <a href="#contato" class="card-link">Quero saber mais <i class="fas fa-arrow-right"></i></a>
                 </div>
+
                 <div class="solucao-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="card-icon"><i class="fas fa-clock"></i></div>
                     <h3>Sistema de gestão de filas e atendimento</h3>
@@ -277,6 +368,7 @@
                     </div>
                     <a href="#contato" class="card-link">Quero saber mais <i class="fas fa-arrow-right"></i></a>
                 </div>
+
                 <div class="solucao-card" data-aos="zoom-in" data-aos-delay="300">
                     <div class="card-icon"><i class="fas fa-tv"></i></div>
                     <h3>TV corporativa / Digital signage</h3>
@@ -389,17 +481,18 @@
                     <span>Atendimento: Seg-Sex, 9h às 18h</span>
                 </div>
                 <div class="social-links">
+                    <a href="https://www.tiktok.com/@captleads?_r=1&_t=ZS-96Cuudq517d&utm_source=website&utm_medium=social&utm_campaign=footer_contact" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     <a href="https://www.instagram.com/captleads/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="contato-form">
                 <h3>Solicitar contato comercial</h3>
-                
+
                 <form id="leadFormSecure" method="POST" action="processa-lead.php">
                     <input type="hidden" name="csrf_token" value="<?php echo generateCSRFToken(); ?>">
-                    
+
                     <div class="form-group">
                         <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
                         <i class="fas fa-user"></i>
@@ -426,12 +519,12 @@
                             <option>Todas as soluções</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary-orange btn-block btn-glow">
+                    <button type="submit" class="btn btn-primary btn-block btn-glow">
                         <i class="fas fa-paper-plane"></i> Enviar mensagem
                     </button>
                     <p class="form-note"><i class="fas fa-lock"></i> Seus dados estão seguros. Respondemos em até 24h.</p>
                 </form>
-                
+
                 <div id="formFeedback" style="display: none; margin-top: 20px; padding: 15px; border-radius: 12px; text-align: center;"></div>
             </div>
         </div>
@@ -449,21 +542,21 @@
                     <div class="blog-image"><i class="fas fa-chart-line"></i></div>
                     <div class="blog-category">Marketing Digital</div>
                     <h3>Como aumentar a conversão de leads em 300%</h3>
-                    <p>Estratégias comprovadas para transformar visitantes em clientes...</p>
+                    <p>Estratégias comprovadas para transformar visitantes em clientes e aumentar sua taxa de conversão de leads...</p>
                     <a href="blog/artigo-conversao-leads.html" class="card-link">Ler artigo <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="blog-image"><i class="fas fa-chart-simple"></i></div>
                     <div class="blog-category">Mídia OOH</div>
                     <h3>O poder da mídia em veículos por app</h3>
-                    <p>Como alcançar seu público em movimento com alta segmentação...</p>
+                    <p>Como alcançar seu público em movimento com alta segmentação e capturar leads qualificados...</p>
                     <a href="blog/artigo-midia-veiculos-app.html" class="card-link">Ler artigo <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="blog-image"><i class="fas fa-gamepad"></i></div>
                     <div class="blog-category">Experiência do Consumidor</div>
                     <h3>Gamificação: a chave para engajar e capturar leads</h3>
-                    <p>Como elementos de jogos aumentam a interação e conversão...</p>
+                    <p>Como elementos de jogos aumentam a interação e conversão de leads com experiências interativas...</p>
                     <a href="blog/artigo-gamificacao-captura-leads.html" class="card-link">Ler artigo <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -513,6 +606,7 @@
                         <li><a href="#">Totens interativos</a></li>
                         <li><a href="#">Sistema de gestão de filas</a></li>
                         <li><a href="#">TV corporativa</a></li>
+                        <li><a href="#">Telas em elevadores</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -530,71 +624,124 @@
             </div>
         </div>
     </footer>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="js/main.js"></script>
 
-<script>
-// Inicializar AOS (garantia)
-if (typeof AOS !== 'undefined') {
-    AOS.init({
-        once: true,
-        duration: 800
-    });
-}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
 
-// Formulário de contato
-const form = document.getElementById('leadFormSecure');
-const feedbackDiv = document.getElementById('formFeedback');
-
-if (form && feedbackDiv) {
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-        submitBtn.disabled = true;
-        
-        const formData = new FormData(form);
-        
-        try {
-            const response = await fetch('processa-lead.php', {
-                method: 'POST',
-                body: formData
+    <script>
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                once: true,
+                duration: 800
             });
-            
-            const result = await response.json();
-            
-            feedbackDiv.style.display = 'block';
-            
-            if (result.success) {
-                feedbackDiv.style.background = 'rgba(34, 197, 94, 0.15)';
-                feedbackDiv.style.border = '1px solid #22c55e';
-                feedbackDiv.style.color = '#22c55e';
-                feedbackDiv.innerHTML = '<i class="fas fa-check-circle"></i> ' + result.message;
-                form.reset();
-                setTimeout(() => {
-                    feedbackDiv.style.display = 'none';
-                }, 5000);
-            } else {
-                feedbackDiv.style.background = 'rgba(239, 68, 68, 0.15)';
-                feedbackDiv.style.border = '1px solid #ef4444';
-                feedbackDiv.style.color = '#ef4444';
-                feedbackDiv.innerHTML = '<i class="fas fa-exclamation-triangle"></i> ' + result.message;
-            }
-        } catch (error) {
-            feedbackDiv.style.display = 'block';
-            feedbackDiv.style.background = 'rgba(239, 68, 68, 0.15)';
-            feedbackDiv.style.border = '1px solid #ef4444';
-            feedbackDiv.style.color = '#ef4444';
-            feedbackDiv.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Erro de conexão. Tente novamente ou fale pelo WhatsApp.';
-        } finally {
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-            feedbackDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
-    });
-}
-</script>
+
+        const form = document.getElementById('leadFormSecure');
+        const feedbackDiv = document.getElementById('formFeedback');
+
+        if (form && feedbackDiv) {
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+                submitBtn.disabled = true;
+
+                const formData = new FormData(form);
+
+                try {
+                    const response = await fetch('processa-lead.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const result = await response.json();
+
+                    feedbackDiv.style.display = 'block';
+
+                    if (result.success) {
+                        feedbackDiv.style.background = 'rgba(34, 197, 94, 0.15)';
+                        feedbackDiv.style.border = '1px solid #22c55e';
+                        feedbackDiv.style.color = '#22c55e';
+                        feedbackDiv.innerHTML = '<i class="fas fa-check-circle"></i> ' + result.message;
+                        form.reset();
+                        setTimeout(() => {
+                            feedbackDiv.style.display = 'none';
+                        }, 5000);
+                    } else {
+                        feedbackDiv.style.background = 'rgba(239, 68, 68, 0.15)';
+                        feedbackDiv.style.border = '1px solid #ef4444';
+                        feedbackDiv.style.color = '#ef4444';
+                        feedbackDiv.innerHTML = '<i class="fas fa-exclamation-triangle"></i> ' + result.message;
+                    }
+                } catch (error) {
+                    feedbackDiv.style.display = 'block';
+                    feedbackDiv.style.background = 'rgba(239, 68, 68, 0.15)';
+                    feedbackDiv.style.border = '1px solid #ef4444';
+                    feedbackDiv.style.color = '#ef4444';
+                    feedbackDiv.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Erro de conexão. Tente novamente ou fale pelo WhatsApp.';
+                } finally {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    feedbackDiv.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest'
+                    });
+                }
+            });
+        }
+    </script>
+
+    <div id="midiaKitDropdown" class="midia-kit-dropdown" style="display: none;">
+        <div class="midia-kit-menu">
+            <h4>Escolha seu Mídia Kit</h4>
+            <ul>
+                <li><a href="assets/midiakit/Mídia Kit In Car.pdf" download>📱 Mídia Kit In Car (Veículos por app)</a></li>
+                <li><a href="assets/midiakit/Mídia Kit Elevadores.pdf" download>🛗 Mídia Kit Telas em Elevadores</a></li>
+                <li><a href="assets/midiakit/Mídia Kit TV Corporativa.pdf" download>📺 Mídia Kit TV Corporativa</a></li>
+                <li><a href="assets/midiakit/Mídia Kit Totens.pdf" download>🖥️ Mídia Kit Totens Interativos</a></li>
+                <li><a href="assets/midiakit/Mídia Kit Fila.pdf" download>⏳ Mídia Kit Sistema de Filas</a></li>
+            </ul>
+            <button id="fecharMidiaKit" class="fechar-btn">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('btnMidiaKit');
+            const modal = document.getElementById('midiaKitDropdown');
+            const fechar = document.getElementById('fecharMidiaKit');
+
+            if (btn && modal) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    modal.style.display = 'flex';
+                });
+
+                if (fechar) {
+                    fechar.addEventListener('click', function() {
+                        modal.style.display = 'none';
+                    });
+                }
+
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+
+    <a href="https://wa.me/5571997172077" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-mascote">
+            <img src="assets/images/mascote.png" alt="Mascote Capt Leads" class="mascote-img">
+            <span class="mascote-texto">Olá, tudo bem?</span>
+        </div>
+    </a>
+
 </body>
+
 </html>

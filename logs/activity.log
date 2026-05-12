@@ -1,0 +1,4 @@
+2026-05-07 17:38:34 | VALIDATION | IP: ::1 | Erro de validação | Data: {"errors":["E-mail inv\u00e1lido","WhatsApp inv\u00e1lido"],"ip":"::1"}
+2026-05-07 17:38:41 | VALIDATION | IP: ::1 | Erro de validação | Data: {"errors":["E-mail inv\u00e1lido"],"ip":"::1"}
+2026-05-07 17:38:49 | LEAD | IP: ::1 | Novo lead capturado | Data: {"nome":"teste","email":"teste@teste.com","whatsapp":"71999999999","empresa":"teeste","solucao":"M\u00eddia em ve\u00edculos por app","ip":"::1","data":"07\/05\/2026 17:38:47","email_enviado":false}
+2026-05-07 17:38:49 | ERROR | IP: ::1 | Falha ao enviar email | Data: {"email":"teste@teste.com"}
