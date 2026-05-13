@@ -11,7 +11,7 @@ require_once 'config.php'; ?>
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#10b981">
 
-    <title>Capt Leads | Sua marca em movimento. Leads em tempo real.</title>
+    <title>Capt Leads - Sua marca em movimento..</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -20,9 +20,12 @@ require_once 'config.php'; ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <link rel="shortcut icon"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2310b981'/%3E%3Ctext x='50' y='67' text-anchor='middle' fill='white' font-size='40' font-weight='bold'%3EC%3C/text%3E%3C/svg%3E"
-        type="image/svg+xml">
+    <!-- Favicon - Caminho relativo (funciona local e online) -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
 </head>
 
 <body>
@@ -34,8 +37,8 @@ require_once 'config.php'; ?>
     <header class="header">
         <div class="container header-container">
             <div class="logo" style="cursor: pointer;" onclick="window.location.href='#home'">
-                <div class="logo-icon" style="font-size: 2rem;">
-                    <i class="fas fa-wifi" style="color: #10b981;"></i>
+                <div class="logo-icon" style="font-size: 2rem; display: flex; align-items: center;">
+                    <img src="assets/images/logocapt.png" alt="Capt Leads" height="100" style="display: block;">
                 </div>
                 <span class="logo-text">Capt<span class="logo-highlight"> Leads</span></span>
             </div>
@@ -66,65 +69,32 @@ require_once 'config.php'; ?>
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-bg-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-        </div>
-
         <div class="container hero-container">
             <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-                <div class="hero-badge animate-pulse">
+                <div class="hero-badge">
                     <i class="fas fa-chart-line"></i> +350% de captura de leads
                 </div>
-                <h1>Sua marca em <span class="highlight-orange">movimento</span> através de <span
-                        class="highlight-glow">telas interativas</span></h1>
-                <p class="hero-description">Transforme telas em oportunidades reais de negócio.
-                    A Capt Leads conecta sua
-                    marca ao público certo por meio de experiências interativas que capturam dados instantaneamente
-                    onde as pessoas estão.</p>
+                <h1>Sua marca em <span class="highlight-teal">movimento</span> através de <span class="highlight-teal">telas interativas</span></h1>
+                <p class="hero-description">Transforme telas em oportunidades reais de negócio. A Capt Leads conecta sua marca ao público certo por meio de experiências interativas que capturam dados instantaneamente onde as pessoas estão.</p>
                 <div class="hero-buttons">
                     <a href="#contato" class="btn btn-primary btn-glow">
                         <i class="fas fa-rocket"></i> Solicitar demonstração
                     </a>
-                    <a href="#como-funciona" class="btn btn-outline-white">
-                        <i class="fas fa-play"></i> Como funciona
-                    </a>
                 </div>
-
-                <div class="hero-solutions">
-                    <div class="solution-tag">
-                        <i class="fas fa-car-side"></i>
-                        <span>Veículos por app</span>
-                    </div>
-                    <div class="solution-tag">
-                        <i class="fas fa-elevator"></i>
-                        <span>Telas em elevadores</span>
-                    </div>
-                    <div class="solution-tag">
-                        <i class="fas fa-tv"></i>
-                        <span>TV Corporativa</span>
-                    </div>
-                    <div class="solution-tag">
-                        <i class="fas fa-chalkboard-user"></i>
-                        <span>Totens interativos</span>
-                    </div>
-                    <div class="solution-tag">
-                        <i class="fas fa-clock"></i>
-                        <span>Sistema de filas</span>
-                    </div>
+                <div class="hero-solutions" style="cursor: pointer;">
+                    <div class="solution-tag"><i class="fas fa-car-side"></i><span>Veículos por app</span></div>
+                    <div class="solution-tag"><i class="fas fa-elevator"></i><span>Telas em elevadores</span></div>
+                    <div class="solution-tag"><i class="fas fa-tv"></i><span>TV Corporativa</span></div>
+                    <div class="solution-tag"><i class="fas fa-chalkboard-user"></i><span>Totens interativos</span></div>
+                    <div class="solution-tag"><i class="fas fa-clock"></i><span>Sistema de filas</span></div>
                 </div>
             </div>
-
             <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000">
-                <div class="dashboard-container">
-                    <div class="dashboard-glow"></div>
-                    <div class="dashboard-preview">
-                        <video autoplay muted loop playsinline loading="lazy" class="dashboard-video">
-                            <source src="assets/videos/loop.mp4" type="video/mp4">
-                            Seu navegador não suporta vídeos.
-                        </video>
-                    </div>
+                <div class="video-container">
+                    <video autoplay muted loop playsinline class="hero-video">
+                        <source src="assets/videos/loop.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
                 </div>
                 <div class="stat-card stat-card-2">
                     <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
@@ -299,7 +269,7 @@ require_once 'config.php'; ?>
                 </div>
                 <div class="sobre-imagem" data-aos="fade-left">
                     <div class="video-wrapper">
-                        <video autoplay muted loop playsinline loading="lazy" class="sobre-video">
+                        <video autoplay muted loop playsinline class="sobre-video">
                             <source src="assets/videos/loop2.mp4" type="video/mp4">
                             Seu navegador não suporta vídeos.
                         </video>
@@ -474,25 +444,23 @@ require_once 'config.php'; ?>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
-                    <span>contato@captleads.com.br</span>
+                    <span>contato.captleads@gmail.com</span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-clock"></i>
-                    <span>Atendimento: Seg-Sex, 9h às 18h</span>
+                    <span>Atendimento: Seg-Sex, 8h às 18h</span>
                 </div>
                 <div class="social-links">
                     <a href="https://www.tiktok.com/@captleads?_r=1&_t=ZS-96Cuudq517d&utm_source=website&utm_medium=social&utm_campaign=footer_contact" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://www.instagram.com/captleads/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/captleads/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="javascript:void(0)" style="cursor: pointer;" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="javascript:void(0)" style="cursor: pointer;" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="contato-form">
                 <h3>Solicitar contato comercial</h3>
 
-                <form id="leadFormSecure" method="POST" action="processa-lead.php">
-                    <input type="hidden" name="csrf_token" value="<?php echo generateCSRFToken(); ?>">
-
+                <form id="leadFormSecure">
                     <div class="form-group">
                         <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
                         <i class="fas fa-user"></i>
@@ -516,6 +484,7 @@ require_once 'config.php'; ?>
                             <option>Totens interativos personalizados</option>
                             <option>Sistema de gestão de filas</option>
                             <option>TV corporativa / Digital signage</option>
+                            <option>Telas em elevadores</option>
                             <option>Todas as soluções</option>
                         </select>
                     </div>
@@ -612,7 +581,7 @@ require_once 'config.php'; ?>
                 <div class="footer-links">
                     <h4>Contato</h4>
                     <ul>
-                        <li><a href="mailto:contato@captleads.com.br">contato@captleads.com.br</a></li>
+                        <li><a href="mailto:contato.captleads@gmail.com">contato.captleads@gmail.com</a></li>
                         <li><a href="tel:+5571997172077">(71) 99717-2077</a></li>
                         <li><a href="#">Fale conosco</a></li>
                     </ul>
@@ -628,6 +597,32 @@ require_once 'config.php'; ?>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
 
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        // Garantir autoplay dos vídeos em dispositivos móveis
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('.dashboard-video, .sobre-video');
+
+            const playVideo = (video) => {
+                if (video && video.paused) {
+                    video.play().catch(e => {
+                        console.log('Autoplay bloqueado, aguardando interação:', e);
+                    });
+                }
+            };
+
+            videos.forEach(video => playVideo(video));
+
+            const firstTouchHandler = () => {
+                videos.forEach(video => playVideo(video));
+                document.body.removeEventListener('touchstart', firstTouchHandler);
+            };
+            document.body.addEventListener('touchstart', firstTouchHandler);
+        });
+    </script>
+
     <script>
         if (typeof AOS !== 'undefined') {
             AOS.init({
@@ -635,6 +630,9 @@ require_once 'config.php'; ?>
                 duration: 800
             });
         }
+
+        // Inicializar EmailJS
+        emailjs.init("KB24mYA85XBZmEltx");
 
         const form = document.getElementById('leadFormSecure');
         const feedbackDiv = document.getElementById('formFeedback');
@@ -648,39 +646,57 @@ require_once 'config.php'; ?>
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
                 submitBtn.disabled = true;
 
-                const formData = new FormData(form);
+                // Capturar dados do formulário
+                const nome = document.getElementById('nome').value;
+                const email = document.getElementById('email').value;
+                const whatsapp = document.getElementById('whatsapp').value;
+                const empresa = document.getElementById('empresa').value || 'Não informado';
+                const solucao = document.getElementById('solucao').value;
+                const dataHora = new Date().toLocaleString('pt-BR');
+
+                // Detectar dispositivo
+                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                const device = isMobile ? 'Mobile' : 'Desktop';
+
+                // Montar mensagem completa
+                const mensagemCompleta = `DADOS DO LEAD\n\n Nome: ${nome}\n E-mail: ${email}\n WhatsApp: ${whatsapp}\n Empresa: ${empresa}\n Solução: ${solucao}\n Data: ${dataHora}\n Dispositivo: ${device}`;
+
+                // Parâmetros para o template EmailJS
+                const templateParams = {
+                    title: "Novo Lead - CaptLeads",
+                    name: nome,
+                    email: email,
+                    whatsapp: whatsapp,
+                    empresa: empresa,
+                    solucao: solucao,
+                    time: dataHora,
+                    device: device,
+                    message: mensagemCompleta
+                };
 
                 try {
-                    const response = await fetch('processa-lead.php', {
-                        method: 'POST',
-                        body: formData
-                    });
+                    const response = await emailjs.send('service_0fdcsbe', 'template_lfxk9hr', templateParams);
 
-                    const result = await response.json();
-
-                    feedbackDiv.style.display = 'block';
-
-                    if (result.success) {
+                    if (response.status === 200) {
+                        feedbackDiv.style.display = 'block';
                         feedbackDiv.style.background = 'rgba(34, 197, 94, 0.15)';
                         feedbackDiv.style.border = '1px solid #22c55e';
                         feedbackDiv.style.color = '#22c55e';
-                        feedbackDiv.innerHTML = '<i class="fas fa-check-circle"></i> ' + result.message;
+                        feedbackDiv.innerHTML = '<i class="fas fa-check-circle"></i> Mensagem enviada com sucesso! Em breve entraremos em contato.';
                         form.reset();
                         setTimeout(() => {
                             feedbackDiv.style.display = 'none';
                         }, 5000);
                     } else {
-                        feedbackDiv.style.background = 'rgba(239, 68, 68, 0.15)';
-                        feedbackDiv.style.border = '1px solid #ef4444';
-                        feedbackDiv.style.color = '#ef4444';
-                        feedbackDiv.innerHTML = '<i class="fas fa-exclamation-triangle"></i> ' + result.message;
+                        throw new Error('Erro no envio');
                     }
                 } catch (error) {
+                    console.error('Erro EmailJS:', error);
                     feedbackDiv.style.display = 'block';
                     feedbackDiv.style.background = 'rgba(239, 68, 68, 0.15)';
                     feedbackDiv.style.border = '1px solid #ef4444';
                     feedbackDiv.style.color = '#ef4444';
-                    feedbackDiv.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Erro de conexão. Tente novamente ou fale pelo WhatsApp.';
+                    feedbackDiv.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Erro ao enviar. Tente novamente ou fale pelo WhatsApp: (71) 99717-2077';
                 } finally {
                     submitBtn.innerHTML = originalText;
                     submitBtn.disabled = false;
@@ -697,11 +713,9 @@ require_once 'config.php'; ?>
         <div class="midia-kit-menu">
             <h4>Escolha seu Mídia Kit</h4>
             <ul>
-                <li><a href="assets/midiakit/Mídia Kit In Car.pdf" download>📱 Mídia Kit In Car (Veículos por app)</a></li>
-                <li><a href="assets/midiakit/Mídia Kit Elevadores.pdf" download>🛗 Mídia Kit Telas em Elevadores</a></li>
-                <li><a href="assets/midiakit/Mídia Kit TV Corporativa.pdf" download>📺 Mídia Kit TV Corporativa</a></li>
-                <li><a href="assets/midiakit/Mídia Kit Totens.pdf" download>🖥️ Mídia Kit Totens Interativos</a></li>
-                <li><a href="assets/midiakit/Mídia Kit Fila.pdf" download>⏳ Mídia Kit Sistema de Filas</a></li>
+                <li><a href="assets/midiakit/Mídia Kit In Car.pdf" download> Mídia Kit In Car (Veículos por app)</a></li>
+                <li><a href="assets/midiakit/Mídia Kit TV Corporativa.pdf" download> Mídia Kit TV Corporativa</a></li>
+                <li><a href="assets/midiakit/Mídia Kit Totens.pdf" download> Mídia Kit Totens Interativos</a></li>
             </ul>
             <button id="fecharMidiaKit" class="fechar-btn">Fechar</button>
         </div>
